@@ -44,7 +44,7 @@
 
 @media (max-width: 768px) {
   .selecaoDeDificuldade {
-    gap: 15px;
+    gap: 14px;
   }
 
   .selecaoDeDificuldade button {
