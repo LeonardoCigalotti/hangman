@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Jogo from './Jogo.vue';
+import Jogo from '../../components/Jogo.vue';
 import { ref, onMounted } from 'vue';
 
 export default {

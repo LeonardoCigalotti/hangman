@@ -26,7 +26,7 @@
 <script>
 import { ref } from 'vue';
 import FormularioTwoPlayer from './FormularioTwoPlayer.vue';
-import Jogo from './Jogo.vue';
+import Jogo from '../../components/Jogo.vue';
 
 export default {
   name: 'ModoTwo',

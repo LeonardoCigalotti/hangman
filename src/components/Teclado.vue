@@ -52,7 +52,7 @@ export default {
   .teclado-botao {
     width: 35px;
     height: 35px;
-    font-size: 18px;
+    font-size: 12px;
   }
 }
 </style>
