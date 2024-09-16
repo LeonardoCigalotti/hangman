@@ -1,49 +1,60 @@
 <template>
-  <section id="jogo">
-    <jogo :palavra="palavra" :dica="null" :etapa="etapa" 
+  <section v-if="etapa === 'formulario'" id="formulario">
+    <Dificuldade @dificuldade-selected="setEtapa" />
+  </section>
+
+  <section v-if="etapa === 'jogo'" id="jogo">
+    <Jogo :palavra="palavra" :dica="null" :etapa="etapa" 
       :letras="letras" @goBack="goBackToModos" />
   </section>
 </template>
 
 <script>
 import Jogo from '../../components/Jogo.vue';
-import { ref, onMounted } from 'vue';
+import Dificuldade from './Dificuldade.vue';
+import palavrasJson from '../../assets/words.json';
+import { ref } from 'vue';
 
 export default {
   name: 'ModoOne',
 
   components: {
-    Jogo
+    Jogo, Dificuldade
   },
 
   setup(props, { emit }) {
+    const etapa = ref('formulario');
     const palavra = ref('');
     const letras = ref([]);
-    const etapa = ref('jogo');
 
     const goBackToModos = () => {
       emit('goBack', 'modos');
     };
 
-    async function buscarPalavra() {
-      try {
-        const response = await fetch('https://api.dicionario-aberto.net/random');
-        const data = await response.json();
+    const setEtapa = (dificuldade) => {
+      etapa.value = 'jogo';
+      buscarPalavra(dificuldade);
+    };
 
-        palavra.value = data.word;
+    function buscarPalavra(dificuldade) {
+      try {
+        const palavras = palavrasJson[dificuldade];
+
+        if (palavras && palavras.length > 0) {
+          const indiceAleatorio = Math.floor(Math.random() * palavras.length);
+          palavra.value = palavras[indiceAleatorio];
+        } else {
+          console.error('Nenhuma palavra encontrada para a dificuldade selecionada.');
+        }
 
       } catch (error) {
-        console.error('Erro ao buscar palavra:', error);
+        console.error('Erro ao carregar o arquivo JSON:', error);
       }
     }
 
-    onMounted(() => {
-      buscarPalavra();
-    });
-
     return {
       palavra, letras, etapa,
-      goBackToModos
+      goBackToModos, setEtapa
     };
   }
 };
