@@ -1,28 +1,42 @@
-# jogo
+# JOGO DA FORCA
 
-This template should help get you started developing with Vue 3 in Vite.
+![Jogo da Forca](./src/assets/jogo.png)
 
-## Recommended IDE Setup
+Este projeto é um jogo da forca desenvolvido com Vue.js 3 usando Vite. O objetivo do jogo é adivinhar a palavra antes que o boneco seja enforcado!
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Acessar o Jogo
 
-## Customize configuration
+Você pode acessar o jogo diretamente pelo GitHub Pages: [Jogo da Forca no GitHub Pages](https://leonardocigalotti.github.io/hangman/)
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Configuração Recomendada de IDE
 
-## Project Setup
+Para uma melhor experiência de desenvolvimento, utilize o [VSCode](https://code.visualstudio.com/) com a extensão [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (lembre-se de desativar o Vetur).
+
+## Personalizar Configurações
+
+Veja a [referência de configuração do Vite](https://vitejs.dev/config/) para mais informações sobre como personalizar o projeto.
+
+## Configuração do Projeto
+
+### Instalar Dependências
+
+Execute o comando abaixo para instalar as dependências do projeto:
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Compilar e Executar em Modo de Desenvolvimento
+
+Para iniciar o servidor de desenvolvimento com hot-reload, execute:
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Compilar e Minificar para Produção
+
+Para gerar os arquivos otimizados para produção:
 
 ```sh
 npm run build
