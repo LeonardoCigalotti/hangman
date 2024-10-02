@@ -13,7 +13,7 @@
         {{ (letra === ' ') ? '-' : (verificarLetra(letra) || etapa === 'final') ? letra : '' }}
       </div>
     </div>
-    <div v-if="dica" class="palavra-dica">Dica: {{ dica }}</div>
+    <div v-if="dica" class="palavra-dica">{{language == 'en' ? 'Hint:' : 'Dica:'}} {{ dica }}</div>
   </div>
 </template>
 
@@ -37,7 +37,10 @@ export default {
     verificarLetra: {
       type: Function,
       required: true
-    }
+    },
+    language: {
+      type: String
+    },
   },
 
   setup(props) {

@@ -1,13 +1,17 @@
 <template>
   <div class="selecaoDeModo">
-    <button @click="selectMode('modo_one')">1 Player</button>
-    <button @click="selectMode('modo_two')">2 Players</button>
+    <button @click="selectMode('modo_one')">{{language == 'en' ? '1 Player' : '1 Jogador'}}</button>
+    <button @click="selectMode('modo_two')">{{language == 'en' ? '2 Players' : '2 Jogadores'}}</button>
   </div>
 </template>
 
 <script>
 export default {
   name: 'Modos',
+  
+  props: {
+    language: String
+  },
 
   setup(props, { emit }) {
     const selectMode = (mode) => {

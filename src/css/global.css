@@ -45,6 +45,19 @@ button[disabled] {
   pointer-events: none;
 }
 
+.config-button {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  cursor: pointer;
+  background: var(--color-background-button);
+}
+
+.config-icon {
+  width: 24px;
+  height: 24px;
+}
+
 @media (max-width: 600px) {
   h1 {
     color: var(--color-text-title);

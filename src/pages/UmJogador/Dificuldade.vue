@@ -1,15 +1,19 @@
 <template>
     <div class="selecaoDeDificuldade">
-      <button @click="selectDificuldade('facil')">Fácil</button>
-      <button @click="selectDificuldade('medio')">Médio</button>
-      <button @click="selectDificuldade('dificil')">Difícil</button>
-      <button @click="selectDificuldade('avancado')">Avançado</button>
+      <button @click="selectDificuldade('facil')">{{language == 'pt' ? 'Fácil' : 'Easy'}}</button>
+      <button @click="selectDificuldade('medio')">{{language == 'pt' ? 'Médio' : 'Medium'}}</button>
+      <button @click="selectDificuldade('dificil')">{{language == 'pt' ? 'Difícil' : 'Hard'}}</button>
+      <button v-if="language == 'pt'" @click="selectDificuldade('avancado')">Avançado</button>
     </div>
   </template>
   
   <script>
   export default {
     name: 'Dificuldade',
+
+    props: {
+      language: String
+    },
   
     setup(props, { emit }) {
       const selectDificuldade = (mode) => {

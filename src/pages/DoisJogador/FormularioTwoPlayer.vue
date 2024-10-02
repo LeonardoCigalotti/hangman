@@ -3,7 +3,7 @@
     <div class="formulario-title">{{ title }}</div>
     <input type="text" class="formulario-input" v-model="inputValue">
     <div class="formulario-buttons">
-      <button @click="goBack">Voltar</button>
+      <button @click="goBack">{{language == 'en' ? 'Back' : 'Voltar'}}</button>
       <button :disabled="disableButton" @click="submitForm">{{ button }}</button>
     </div>
   </div>
@@ -20,7 +20,8 @@ export default {
     button: {
       type: String,
       default: "Próximo"
-    }
+    },
+    language: String
   },
 
   setup(props, { emit }) {

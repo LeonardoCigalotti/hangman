@@ -1,42 +1,42 @@
-# JOGO DA FORCA
+# HANGMAN GAME
 
-![Jogo da Forca](./src/assets/jogo.png)
+![Hangman Game](./src/assets/jogo.png)
 
-Este projeto é um jogo da forca desenvolvido com Vue.js 3 usando Vite. O objetivo do jogo é adivinhar a palavra antes que o boneco seja enforcado!
+This project is a Hangman game developed with Vue.js 3 using Vite. The objective of the game is to guess the word before the stick figure is hanged!
 
-## Acessar o Jogo
+## Access the Game
 
-Você pode acessar o jogo diretamente pelo GitHub Pages: [Jogo da Forca no GitHub Pages](https://leonardocigalotti.github.io/hangman/)
+You can access the game directly via GitHub Pages: [Hangman Game on GitHub Pages](https://leonardocigalotti.github.io/hangman/)
 
-## Configuração Recomendada de IDE
+## Recommended IDE Setup
 
-Para uma melhor experiência de desenvolvimento, utilize o [VSCode](https://code.visualstudio.com/) com a extensão [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (lembre-se de desativar o Vetur).
+For the best development experience, use [VSCode](https://code.visualstudio.com/) with the [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) extension (remember to disable Vetur).
 
-## Personalizar Configurações
+## Customize Settings
 
-Veja a [referência de configuração do Vite](https://vitejs.dev/config/) para mais informações sobre como personalizar o projeto.
+See the [Vite configuration reference](https://vitejs.dev/config/) for more information on how to customize the project.
 
-## Configuração do Projeto
+## Project Setup
 
-### Instalar Dependências
+### Install Dependencies
 
-Execute o comando abaixo para instalar as dependências do projeto:
+Run the command below to install the project's dependencies:
 
 ```sh
 npm install
 ```
 
-### Compilar e Executar em Modo de Desenvolvimento
+### Compile and Run in Development Mode
 
-Para iniciar o servidor de desenvolvimento com hot-reload, execute:
+To start the development server with hot-reload, execute:
 
 ```sh
 npm run dev
 ```
 
-### Compilar e Minificar para Produção
+### Compile and Minify for Production
 
-Para gerar os arquivos otimizados para produção:
+To generate optimized files for production:
 
 ```sh
 npm run build

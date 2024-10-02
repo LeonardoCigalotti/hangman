@@ -1,22 +1,27 @@
 <template>
   <section v-if="etapa === 'formulario'" id="formulario">
-    <Dificuldade @dificuldade-selected="setEtapa" />
+    <Dificuldade @dificuldade-selected="setEtapa" :language="language" />
   </section>
 
   <section v-if="etapa === 'jogo'" id="jogo">
     <Jogo :palavra="palavra" :dica="null" :etapa="etapa" 
-      :letras="letras" @goBack="goBackToModos" />
+      :letras="letras" @goBack="goBackToModos" :language="language" />
   </section>
 </template>
 
 <script>
 import Jogo from '../../components/Jogo.vue';
 import Dificuldade from './Dificuldade.vue';
-import palavrasJson from '../../assets/words.json';
+import palavrasJson from '../../assets/palavras.json';
+import wordsJson from '../../assets/words.json';
 import { ref } from 'vue';
 
 export default {
   name: 'ModoOne',
+
+  props: {
+    language: String,
+  },
 
   components: {
     Jogo, Dificuldade
@@ -38,7 +43,13 @@ export default {
 
     function buscarPalavra(dificuldade) {
       try {
-        const palavras = palavrasJson[dificuldade];
+        let palavras = [];
+
+        if(props.language == 'en') {
+          palavras = wordsJson[dificuldade];
+        } else if(props.language == 'pt') {
+          palavras = palavrasJson[dificuldade];
+        }
 
         if (palavras && palavras.length > 0) {
           const indiceAleatorio = Math.floor(Math.random() * palavras.length);

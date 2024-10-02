@@ -2,16 +2,18 @@
   <section v-if="tela === 'formulario'">
     <formulario-two-player
       v-if="etapa === 'palavra'"
-      title="Defina a palavra"
-      button="Próximo"
+      :title="language == 'en' ? 'Write the word' : 'Defina a palavra'"
+      :button="language == 'en' ? 'Next' : 'Próximo'"
+      :language="language"
       @submit="setPalavra"
       @goBack="goBackToModos"
     />
 
     <formulario-two-player
       v-if="etapa === 'dica'"
-      title="Defina a dica"
-      button="Iniciar Jogo"
+      :title="language == 'en' ? 'Write the hint' : 'Defina a palavra'"
+      :button="language == 'en' ? 'Start the game' : 'Iniciar o jogo'"
+      :language="language"
       @submit="iniciarJogo"
       @goBack="goBackToPalavra"
     />
@@ -19,7 +21,7 @@
 
   <section v-if="tela === 'jogo'" id="jogo">
       <jogo :palavra="palavraDigitada" :dica="dicaDigitada" :etapa="etapa" 
-        :letras="letras" @goBack="goBackToModos" />
+        :letras="letras" @goBack="goBackToModos" :language="language" />
   </section>
 </template>
 
@@ -30,6 +32,10 @@ import Jogo from '../../components/Jogo.vue';
 
 export default {
   name: 'ModoTwo',
+
+  props: {
+    language: String
+  },
 
   components: {
     FormularioTwoPlayer, Jogo

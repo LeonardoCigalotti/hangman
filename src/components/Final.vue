@@ -1,6 +1,6 @@
 <template>
     <div class="final">
-        <div :class="`final-texto ${resultado}`">{{ resultado === 'ganhador' ? 'Parabéns você ganhou' : 'Você perdeu' }}!</div>
+        <div :class="`final-texto ${resultado}`">{{ resultado === 'ganhador' ? language == 'en' ? 'You WON!!' : 'Você Venceu!!' : language == 'en' ? 'You lose, try again' : 'Você Perdeu, tente novamente'}}!</div>
     </div>
 </template>
   
@@ -12,6 +12,9 @@
       resultado: {
         type: String,
         required: true
+      },
+      language: {
+        type: String,
       },
     },
   };

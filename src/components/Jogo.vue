@@ -2,17 +2,17 @@
   <div class="jogo">
     <Forca :erros="erros" />
     <Palavra :palavra="palavra" :dica="dica" 
-      :verificarLetra="verificarLetra" :etapa="etapaLocal" />
+      :verificarLetra="verificarLetra" :etapa="etapaLocal" :language="language" />
 
     <Teclado v-if="etapaLocal === 'jogo'"
       :letras="letras" :verificarLetra="verificarLetra" :jogar="jogar"
     />
 
     <Final v-if="etapaLocal === 'final'"
-      :resultado="resultado"
+      :resultado="resultado" :language="language"
     />
 
-    <button class="inicio-button" @click="goBackToModos">Início</button>
+    <button class="inicio-button" @click="goBackToModos">{{language == 'en' ? 'Back' : 'Início'}}</button>
   </div>
 </template>
   
@@ -46,6 +46,9 @@ export default {
       required: true
     },
     etapa: {
+      type: String
+    },
+    language: {
       type: String
     },
   },
