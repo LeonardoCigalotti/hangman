@@ -1,6 +1,6 @@
 <template>
   <section v-if="etapa === 'formulario'" id="formulario">
-    <Dificuldade @dificuldade-selected="setEtapa" :language="language" />
+    <Dificuldade @dificuldade-selected="setEtapa" @goBack="goBackToModos" :language="language" />
   </section>
 
   <section v-if="etapa === 'jogo'" id="jogo">

@@ -29,7 +29,7 @@ export default {
 .selecaoDeModo {
   display: flex;
   justify-content: center;
-  gap: 100px;
+  gap: 80px;
   margin-top: 20px;
 }
 
