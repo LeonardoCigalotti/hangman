@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./Instrucoes.css"
 
 type InstrucoesProps = {
