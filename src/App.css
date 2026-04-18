@@ -1,0 +1,59 @@
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3 {
+  margin-bottom: 20px;
+}
+
+.spacing-inicio {
+  margin-top: 15%;
+}
+
+.instrucoes {
+  text-align: start;
+}
+
+.button-inicio {
+  margin-top: 10%;
+  margin-right: 35px;
+}
+
+.section-inicio {
+  display: inline-table;
+}
+
+.jogo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.inicio-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 25px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  color: black;
+}
+
+.inicio-button:hover {
+  background-color: #e0e0e0;
+}

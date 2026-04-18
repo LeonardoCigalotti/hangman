@@ -1,0 +1,27 @@
+.palavra {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.palavra-letras {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  justify-content: center; 
+  flex-wrap: wrap;
+}
+
+.palavra-letra {
+  height: 40px;
+  width: 40px;
+  margin: 0 5px;
+  font-size: 23px;
+  border-bottom: 1px solid var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

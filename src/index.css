@@ -1,11 +1,17 @@
-:root{
-  --color-background:#2b343e;  
-  --color-background-button:#2980b9;
-  --color-text-dark:#2c3e50;
-  --color-text-light:#ecf0f1;
-  --color-text-title:#1abc9c;
-  --color-text-success:#2ecc71;
-  --color-text-error:#c0392b;
+:root {
+  --color-background: #ffffff;
+  --color-background-button: #2980b8;
+  --color-text-light: #ecf0f1;
+  --color-text:#383737;
+  --color-text-title: #1abc9c;
+  --color-text-success: #2ecc71;
+  --color-text-error: #c0392b;
+}
+
+body.dark {
+  --color-background: #383737;
+  --color-text-dark: #ecf0f1;
+  --color-text: #ecf0f1;
 }
 
 * {
@@ -13,7 +19,7 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  color: var(--color-text-light);
+  color: var(--color-text-dark);
 }
 
 html, body {
@@ -34,6 +40,7 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.2s opacity;
+  color: var(--color-text-light);
 }
 
 button:hover{
@@ -47,8 +54,8 @@ button[disabled] {
 
 .config-button {
   position: absolute;
-  top: 5%;
-  right: 5%;
+  top: 1%;
+  right: 1%;
   cursor: pointer;
   background: var(--color-background-button);
 }

@@ -1,43 +1,36 @@
-# HANGMAN GAME
+# Jogo da Forca
 
-![Hangman Game](./src/assets/jogo.png)
+um jogo da forca desenvolvido em React + Typescript, com interface simples e responsiva
 
-This project is a Hangman game developed with Vue.js 3 using Vite. The objective of the game is to guess the word before the stick figure is hanged!
+# Preview
 
-## Access the Game
+![Jogo da Forca](./public/preview.png)
 
-You can access the game directly via GitHub Pages: [Hangman Game on GitHub Pages](https://leonardocigalotti.github.io/hangman/)
+# Funcionalidades
 
-## Recommended IDE Setup
+- Escolha aleatória de palavras
+- Sistema de tentativas limitadas
+- Feedback visual de acertos e erros
+- Modo em inglês e português
+- Modo escuro e claro
 
-For the best development experience, use [VSCode](https://code.visualstudio.com/) with the [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) extension (remember to disable Vetur).
+# Tecnologia
 
-## Customize Settings
+- React
+- Typescript
+- CSS
 
-See the [Vite configuration reference](https://vitejs.dev/config/) for more information on how to customize the project.
+# Como executar
 
-## Project Setup
+```bash
+# Clone o repositório
+git clone https://github.com/LeonardoCigalotti/hangman.git
 
-### Install Dependencies
+# Acesse a pasta
+cd hangman
 
-Run the command below to install the project's dependencies:
-
-```sh
+# Instale as dependências
 npm install
-```
 
-### Compile and Run in Development Mode
-
-To start the development server with hot-reload, execute:
-
-```sh
+# Rode o projeto
 npm run dev
-```
-
-### Compile and Minify for Production
-
-To generate optimized files for production:
-
-```sh
-npm run build
-```

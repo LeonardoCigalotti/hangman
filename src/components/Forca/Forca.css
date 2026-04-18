@@ -1,0 +1,9 @@
+.forca img {
+    height: 200px;
+}
+
+@media (max-width: 600px) {
+    .forca img {
+        height: 130px;
+    }
+}
